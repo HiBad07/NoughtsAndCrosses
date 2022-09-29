@@ -1,15 +1,20 @@
+#Defining variables to be used in the game.
+
 Row1 = ['.','.','.']
 Row2 = ['.','.','.']
 Row3 = ['.','.','.']
 user1 = ""
 user2 = ""
 
+#FUNCTIONS -------------------------------------------
+#Prints the board out
 def printBoard():
     print("", "", "1", "2", "3")
     print("A", Row1[0], Row1[1], Row1[2])
     print("B", Row2[0], Row2[1], Row2[2])
     print("C", Row3[0], Row3[1], Row3[2])
 
+#Sets the game up
 def initialize():
     global user1
     global user2
@@ -18,6 +23,7 @@ def initialize():
 
     runGame(user1, user2)
 
+#Runs the game for user one
 def runGame(user1, user2):
     global Row1
     global Row2
@@ -52,7 +58,7 @@ def runGame(user1, user2):
     else:
         P2Move(user1, user2)
 
-#--------------------------------------------------------------------
+#------------------------------------PLAYER TWO--------------------------------
 
 def P2Move(user1, user2):
     
@@ -95,11 +101,11 @@ def P2Move(user1, user2):
         runGame(user1, user2)
 
 
-
+#Prints the board out for player two.
 def printBoard():
     print("", "", "1", "2", "3")
     print("A", Row1[0], Row1[1], Row1[2])
     print("B", Row2[0], Row2[1], Row2[2])
     print("C", Row3[0], Row3[1], Row3[2])
-
+#Runs the game
 initialize()
